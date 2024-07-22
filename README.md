@@ -30,7 +30,7 @@ Computational tasks:
 6. Quantize all floats of DataC in each block into a uint32, which is the result of the block.
 
 Verification tasks:
-1. Check whether the average block time is within the specified range - determine whether the FP16 computing power and video memory bandwidth meet the standards
+1. Check whether the average block time is within the specified range - determine whether the FP16 performance and video memory bandwidth meet the standards
 2. Check whether a sufficient number of block results can be completed and each result is correct.
 
 ## Optimization solution
