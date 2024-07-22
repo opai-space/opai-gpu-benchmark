@@ -31,7 +31,7 @@ Computational tasks:
 
 Verification tasks:
 1. Check whether the average block time is within the specified range - determine whether the FP16 computing power and video memory bandwidth meet the standards
-2. Check whether a sufficient number of block results can be completed and each result number is correct.
+2. Check whether a sufficient number of block results can be completed and each result is correct.
 
 ## Optimization solution
 * Use multithreading to generate initial data (soon)
