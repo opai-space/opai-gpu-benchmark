@@ -15,7 +15,7 @@ typedef float BTYPE;
 
 __global__ void calcKernel(int round, BTYPE* c, BTYPE* a, BTYPE* b, const ssize_t N)
 {
-    const int i = blockIdx.x * blockDim.x + threadIdx.x;
+    const ssize_t i = (ssize_t)blockIdx.x * (ssize_t)blockDim.x + (ssize_t)threadIdx.x;
     if (i < N)
     {
         for (int t = 0; t < round; t++) {
@@ -28,7 +28,7 @@ __global__ void calcKernel(int round, BTYPE* c, BTYPE* a, BTYPE* b, const ssize_
 
 __global__ void sumKernel(unsigned int* output, const BTYPE* input, const ssize_t sumBlockLength, const ssize_t N)
 {
-    const int i = blockIdx.x * blockDim.x + threadIdx.x;
+    const ssize_t i = (ssize_t)blockIdx.x * (ssize_t)blockDim.x + (ssize_t)threadIdx.x;
     if (i < N)
     {
         unsigned int value = (unsigned int)(input[i] * 1812433253);
